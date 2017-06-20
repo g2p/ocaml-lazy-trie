@@ -55,6 +55,8 @@ val map_subtree :
     found at [path] in [tree], and bind the returned node back at that position
     in the tree *)
 
+val partition : ('a -> bool) -> ('a, 'b) t -> (('a, 'b) t * ('a, 'b) t)
+
 val iter: ('a list -> 'b -> unit) -> ('a, 'b) t -> unit
 (** iters over all the bindings in the trie, top-down *)
 

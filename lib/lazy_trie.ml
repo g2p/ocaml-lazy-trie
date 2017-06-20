@@ -130,6 +130,9 @@ let rec filter_keys f tree =
         !!(tree.children)
     )}
 
+let partition f tree =
+  (filter_keys f tree, filter_keys (fun k -> not @@ f k) tree)
+
 let graft tree path node = map_subtree tree path (fun _ -> node)
 
 let graft_lazy tree path lazy_node =
