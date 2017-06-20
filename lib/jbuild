@@ -1,0 +1,11 @@
+(jbuild_version 1)
+
+(library
+ ((name        lazy_trie)
+  (public_name lazy-trie)
+  (flags (:standard -safe-string))
+  (ocamlopt_flags (:standard -O3))
+  (wrapped false)
+ ))
+
+
